@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Charles Cantin - Photographe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1, h2 {
+            text-align: center;
+        }
+        
+        .fullscreen-bg {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .fullscreen-bg__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        section {
+            padding: 50px;
+        }
+        
+        section:not(:first-child) {
+            background-color: #f7f7f7;
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        input, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page d'accueil -->
+    <section id="accueil">
+        <div class="fullscreen-bg">
+            <img src="logophotostudi.jpg" alt="Logo Photo Studio" class="fullscreen-bg__image">
+        </div>
+        <div class="centered-text">
+            <h1>Charles Cantin - Photographe</h1>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="scrollToSection('galerie')">Galerie</button>
+            <button onclick="scrollToSection('tarifs-prestations')">Tarifs et prestations</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </div>
+    </section>
+
+    <!-- Page galerie -->
+    <section id="galerie">
+        <h2>Galerie</h2>
+        <!-- Contenu de la galerie -->
+        <div class="navigation-buttons">
+            <button onclick="scrollToSection('accueil')">Accueil</button>
+            <button onclick="scrollToSection('tarifs-prestations')">Tarifs et prestations</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </div>
+    </section>
+
+    <!-- Page "Tarifs et prestations" -->
+    <section id="tarifs-prestations">
+        <h2>Tarifs et prestations</h2>
+        <!-- Contenu des tarifs et prestations -->
+        <div class="navigation-buttons">
+            <button onclick="scrollToSection('accueil')">Accueil</button>
+            <button onclick="scrollToSection('galerie')">Galerie</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </div>
+    </section>
+
+    <!-- Page "Contact" -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/your-email" method="POST">
+            <!-- Formulaire de contact -->
+            <div class="navigation-buttons">
+                <button onclick="scrollToSection('accueil')">Accueil</button>
+                <button onclick="scrollToSection('galerie')">Galerie</button>
+                <button onclick="scrollToSection('tarifs-prestations')">Tarifs et prestations</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
